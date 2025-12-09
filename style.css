@@ -1,12 +1,11 @@
-/* =========================================================
-   VARIABLES Y RESET
-   ========================================================= */
+/* Variables simples */
 :root {
-  --primary-color: #1f1f1f;  /* Color principal de texto y header/footer */
-  --accent-color: #f44336;   /* Color de acento para botones y enlaces */
-  --bg-color: #fafafa;       /* Color de fondo de la página */
-  --text-color: #333;        /* Color de texto general */
-  --font-main: 'Montserrat', sans-serif; /* Fuente principal */
+  --primary: #1a1a1a;     /* Negro oscuro para header/footer y títulos */
+  --accent: #e53935;      /* Rojo para enlaces y botones */
+  --light: #ffffff;       /* Fondo blanco */
+  --gray: #f9f9f9;        /* Fondo gris claro */
+  --text: #333333;        /* Texto principal */
+  --font: 'Montserrat', sans-serif;
 }
 
 /* Reset básico */
@@ -16,244 +15,230 @@
   box-sizing: border-box;
 }
 
-/* Estilos base del body */
 body {
-  font-family: var(--font-main);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--light);
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
-/* =========================================================
-   ENLACES
-   ========================================================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
 a {
-  text-decoration: none;          /* Sin subrayado */
-  color: var(--accent-color);
-  transition: color 0.3s;
+  color: var(--accent);
+  text-decoration: none;
 }
 
 a:hover {
-  color: #d32f2f;                 /* Cambio de color al pasar el mouse */
+  text-decoration: underline;
 }
 
-/* =========================================================
-   HEADER
-   ========================================================= */
-header {
+/* Header */
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 1.5rem 0;
+}
+
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--primary-color);
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
-/* Logo y nombre */
-header div {
+.brand {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
-header img {
-  margin-right: 1rem;
+.logo {
+  height: 45px;
 }
 
-/* Menú de navegación */
-nav a {
-  margin-left: 1.5rem;
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nav a {
+  color: white;
+  margin-left: 2rem;
   font-weight: 500;
 }
 
-/* =========================================================
-   HERO DESTACADO
-   ========================================================= */
-section.hero {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background-color: #e0e0e0;
+.nav a:hover {
+  color: var(--accent);
 }
 
-section.hero img {
-  width: 300px;
-  max-width: 100%;
-  border-radius: 15px;
-  margin: 1rem;
+/* Hero centrado vertical y horizontalmente */
+.hero {
+  padding: 6rem 0;
+  background: var(--gray);
+  text-align: center;
 }
 
-section.hero div {
-  max-width: 500px;
-  margin: 1rem;
+.hero-center {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-section.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
+.hero-center h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-section.hero p {
-  margin-bottom: 1rem;
+.hero-center p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #555;
 }
 
-section.hero a {
+.btn {
   display: inline-block;
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2.2rem;
+  border-radius: 8px;        /* Bordes ligeramente redondeados */
   font-weight: 600;
+  font-size: 1.1rem;
   transition: background 0.3s;
 }
 
-section.hero a:hover {
-  background-color: #d32f2f;
+.btn:hover {
+  background: #d32f2f;
 }
 
-/* =========================================================
-   SECCIÓN AVENTURA
-   ========================================================= */
-section.aventura {
-  padding: 2rem;
-  background-color: #fff;
+/* Secciones */
+.how-to, .features {
+  padding: 4rem 0;
 }
 
-section.aventura h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
-  color: var(--primary-color);
+.how-to {
+  background: var(--gray);
 }
 
-/* Grid de tarjetas */
-section.aventura div {
+.features {
+  background: var(--light);
+}
+
+/* Pasos (Cómo se juega) */
+.steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-section.aventura div div {
-  background-color: #f5f5f5;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.4s, box-shadow 0.4s;
-}
-
-section.aventura div div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* =========================================================
-   ANIMACIÓN SVG
-   ========================================================= */
-section svg-anim {
+.step {
   text-align: center;
-  margin: 2rem 0;
 }
 
-section.svg-anim h3 {
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  color: var(--primary-color);
+.step .number {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 50px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
 }
 
-/* =========================================================
-   CÓMO SE JUEGA
-   ========================================================= */
-section.com-es-juga {
+.step p {
+  font-size: 1rem;
+}
+
+/* Cards (Aventura) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
   padding: 2rem;
-  background-color: #f0f0f0;
-}
-
-section.com-es-juga h3 {
+  border: 1px solid #eee;
   text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
 }
 
-section.com-es-juga ul {
-  max-width: 700px;
-  margin: 0 auto 1rem auto;
-  list-style-type: disc;
-  padding-left: 1.5rem;
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
-section.com-es-juga li {
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-}
-
-section.com-es-juga p {
+/* Footer */
+.footer {
+  background: var(--primary);
+  color: white;
+  padding: 3rem 0;
   text-align: center;
-  margin-top: 1rem;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
-footer {
+.footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--primary-color);
-  color: #fff;
   flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-footer div a {
-  margin-left: 1rem;
-  color: #fff;
+.social a {
+  color: white;
   font-size: 1.5rem;
-  transition: color 0.3s;
+  margin-left: 1rem;
 }
 
-footer div a:hover {
-  color: var(--accent-color);
+.social a:hover {
+  color: var(--accent);
 }
 
-/* =========================================================
-   ANIMACIÓN SCROLL (REVEAL)
-   ========================================================= */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
+.more {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =========================================================
-   RESPONSIVIDAD
-   ========================================================= */
-@media (max-width: 768px) {
-  section.hero {
+/* Responsive */
+@media (max-width: 868px) {
+  .header .container {
     flex-direction: column;
+    gap: 1rem;
     text-align: center;
   }
 
-  section.hero div,
-  section.hero img {
-    margin: 0.5rem 0;
+  .nav a {
+    margin: 0 1rem;
   }
 
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  section.aventura div {
+  .hero-grid {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2.2rem;
   }
 }
