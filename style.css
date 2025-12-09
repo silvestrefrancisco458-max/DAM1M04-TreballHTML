@@ -1,0 +1,259 @@
+/* =========================================================
+   VARIABLES Y RESET
+   ========================================================= */
+:root {
+  --primary-color: #1f1f1f;  /* Color principal de texto y header/footer */
+  --accent-color: #f44336;   /* Color de acento para botones y enlaces */
+  --bg-color: #fafafa;       /* Color de fondo de la página */
+  --text-color: #333;        /* Color de texto general */
+  --font-main: 'Montserrat', sans-serif; /* Fuente principal */
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base del body */
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ENLACES
+   ========================================================= */
+a {
+  text-decoration: none;          /* Sin subrayado */
+  color: var(--accent-color);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #d32f2f;                 /* Cambio de color al pasar el mouse */
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo y nombre */
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  margin-right: 1rem;
+}
+
+/* Menú de navegación */
+nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+/* =========================================================
+   HERO DESTACADO
+   ========================================================= */
+section.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #e0e0e0;
+}
+
+section.hero img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 15px;
+  margin: 1rem;
+}
+
+section.hero div {
+  max-width: 500px;
+  margin: 1rem;
+}
+
+section.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+section.hero p {
+  margin-bottom: 1rem;
+}
+
+section.hero a {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+section.hero a:hover {
+  background-color: #d32f2f;
+}
+
+/* =========================================================
+   SECCIÓN AVENTURA
+   ========================================================= */
+section.aventura {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+section.aventura h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+/* Grid de tarjetas */
+section.aventura div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+section.aventura div div {
+  background-color: #f5f5f5;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+section.aventura div div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* =========================================================
+   ANIMACIÓN SVG
+   ========================================================= */
+section svg-anim {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+section.svg-anim h3 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+/* =========================================================
+   CÓMO SE JUEGA
+   ========================================================= */
+section.com-es-juga {
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+section.com-es-juga h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+section.com-es-juga ul {
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+section.com-es-juga li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+section.com-es-juga p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+footer div a {
+  margin-left: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+footer div a:hover {
+  color: var(--accent-color);
+}
+
+/* =========================================================
+   ANIMACIÓN SCROLL (REVEAL)
+   ========================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVIDAD
+   ========================================================= */
+@media (max-width: 768px) {
+  section.hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section.hero div,
+  section.hero img {
+    margin: 0.5rem 0;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section.aventura div {
+    grid-template-columns: 1fr;
+  }
+}
