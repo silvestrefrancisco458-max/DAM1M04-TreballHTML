@@ -242,3 +242,49 @@ a:hover {
     font-size: 2.2rem;
   }
 }
+
+
+/*=================================================*/
+/*==================about.html=====================*/
+/*=================================================*/
+
+
+/* TEAM LIST */
+/* Para poner los nombre de los creadores en el medio
+Se parado por una linea */
+.about-team {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.team-list {
+  max-width: 600px;
+  margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+}
+
+.team-list li {
+  font-size: 1.3rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.team-list li:last-child {
+  border-bottom: none;
+}
+
+/* VIDEO SECTION */
+.video-frame {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.video-frame iframe {
+  width: 90%;
+  max-width: 700px;
+  aspect-ratio: 16/9;
+  border: none;
+}
