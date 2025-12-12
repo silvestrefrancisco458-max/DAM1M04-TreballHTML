@@ -44,30 +44,164 @@ p { color: #555; line-height: 1.6; }
 a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
 a:hover { color: #d32f2f; text-decoration: underline; }
 
-/* Header */
+/* HEADER – Versión profesional 2025 */
 .header {
-  background: var(--primary);
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
   color: white;
   padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.header-container {
+.header__inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.brand { display: flex; align-items: center; gap: 1rem; }
-.logo { height: 50px; }
-.title { font-size: 1.8rem; font-weight: 700; }
+/* LOGO + NOMBRE (siempre juntos y clicables) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.3s;
+}
 
-.nav a { margin-left: 2rem; font-weight: 500; }
-.nav a:hover { color: var(--accent); }
+.brand:hover {
+  opacity: 0.85;
+}
 
+.brand__logo {
+  height: 48px;          /* tamaño perfecto */
+  width: auto;
+}
+
+.brand__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+/* MENÚ */
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  font-weight: 500;
+  font-size: 1.05rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 50%;
+  background-color: var(--accent);
+  transition: width 0.3s, left 0.3s;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/*============================================================================*/
+/* ==== MENÚ (móviles) ==== */
+/*============================================================================*/
+
+/* ====== TÍTULO CON ANIMACIÓN DE COLORES (ARCOÍRIS SUAVE) ====== */
+.brand__title {
+  font-size: 2.1rem;           /* más grande y potente */
+  font-weight: 800;
+  letter-spacing: -1px;
+  
+  /* Animación de colores degradados que se mueven */
+  background: linear-gradient(90deg, 
+    #ff006e, #8338ec, #3a86ff, #ffbe0b, #fb5607, #ff006e);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Animación infinita y suave */
+  animation: rainbowFlow 12s ease infinite;
+}
+
+/* La animación del arcoíris */
+@keyframes rainbowFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ====== MENÚ MÁS GRANDE Y PROFESIONAL ====== */
+.nav {
+  display: flex;
+  gap: 3rem;                    /* más espacio entre enlaces */
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  font-weight: 600;             /* letra más bold */
+  font-size: 1.15rem;           /* tamaño más grande (antes era 1.05rem) */
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Línea debajo que crece al pasar el ratón (más gruesa y rápida) */
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;                  /* línea más gruesa */
+  bottom: -8px;
+  left: 50%;
+  background: linear-gradient(90deg, #ff006e);
+  border-radius: 2px;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+
+.nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* En móvil también se ve más grande */
+@media (max-width: 868px) {
+  .nav a {
+    font-size: 1.4rem;          /* en móvil el menú desplegado queda grande y claro */
+    padding: 0.8rem 0;
+  }
+  
+  .brand__title {
+    font-size: 1.9rem;          /* un poco más pequeño en móvil para que quepa bien */
+  }
+}
+/*============================================================================*/
+/*====================== FIN MENÚ (móviles) ==================================*/
+/*============================================================================*/
 /* Hero */
 .hero { display: flex; align-items: center; justify-content: center; padding: 6rem 0; background: var(--gray); }
 .hero{background-image: url(./Assets/Main\ imagen.png);  background-size: cover;   background-position: center;   }
@@ -78,12 +212,31 @@ a:hover { color: #d32f2f; text-decoration: underline; }
 .hero-image img { width: 100%; max-width: 500px; border-radius: 12px; }
 
 /* Button */
-.btn { display: inline-block; padding: 1rem 2rem; background: var(--accent); color: white; border-radius: 8px; font-weight: 600; transition: background var(--transition); }
-.btn:hover { background: #d32f2f; }
+.btn { 
+  display: inline-block; 
+  padding: 1rem 2rem; 
+  background: var(--accent); 
+  color: white; 
+  border-radius: 8px; 
+  font-weight: 600; 
+  transition: background 
+  var(--transition); 
+}
+.btn:hover { 
+  background: #d32f2f; 
+}
 
 /* How-to Steps */
-.how-to { background: var(--light); padding: 4rem 0; }
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; text-align: center; }
+.how-to { 
+  background: var(--light); 
+  padding: 4rem 0; 
+}
+.steps { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 2rem; 
+  text-align: center; 
+}
 .step .number { 
   display: inline-block; 
   width: 50px; height: 50px; 
@@ -106,27 +259,27 @@ a:hover { color: #d32f2f; text-decoration: underline; }
   background: var(--gray);
   padding: 4rem 0; }
 .grid { 
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
   gap: 2rem; 
 }
 .card { 
-  background: white; 
+  background: rgb(238, 230, 230); 
   padding: 2rem; 
   border-radius: 12px; 
   text-align: center; 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
   transition: transform var(--transition), box-shadow var(--transition); 
 }
 .card:hover { 
   transform: translateY(-5px); 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+  box-shadow: 0 8px 20px rgba(214, 214, 214, 0.15); 
 }
 
 /* Footer */
 .footer { 
   background: var(--primary); 
-  color: white; padding: 3rem 0; 
+  color: rgb(180, 180, 180); padding: 3rem 0; 
   text-align: center; 
 }
 .footer-container { 
