@@ -159,7 +159,7 @@ a:hover { color: #d32f2f; text-decoration: underline; }
 }
 
 .brand__logo {
-  height: 50px;           /* un poco más grande y visible */
+  height: 5rem;           /* un poco más grande y visible */
   width: auto;
 }
 
