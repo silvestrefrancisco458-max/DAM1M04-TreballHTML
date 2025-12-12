@@ -1,3 +1,8 @@
+/*----------------------------------------------------------------------------------------------- */
+/*                                             INDEX                                               */
+/*----------------------------------------------------------------------------------------------- */
+
+
 /* Variables */
 :root {
   --primary: #1a1a1a;
@@ -65,6 +70,7 @@ a:hover { color: #d32f2f; text-decoration: underline; }
 
 /* Hero */
 .hero { display: flex; align-items: center; justify-content: center; padding: 6rem 0; background: var(--gray); }
+.hero{background-image: url(./Assets/Main\ imagen.png);  background-size: cover;   background-position: center;   }
 .hero-content { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center; }
 .hero-text { max-width: 600px; }
 .hero-text h2 { font-size: 2.8rem; margin-bottom: 1rem; }
@@ -158,3 +164,8 @@ a:hover { color: #d32f2f; text-decoration: underline; }
     font-size: 2rem; 
   }
 }
+
+
+/*----------------------------------------------------------------------------------------------- */
+/*                                            HISTORIA                                            */
+/*----------------------------------------------------------------------------------------------- */
