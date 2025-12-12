@@ -126,83 +126,152 @@ a:hover { color: #d32f2f; text-decoration: underline; }
 }
 
 /*============================================================================*/
-/* ==== MENÚ (móviles) ==== */
+/*                                MENÚ (móviles)                              */
 /*============================================================================*/
 
-/* ====== TÍTULO CON ANIMACIÓN DE COLORES (ARCOÍRIS SUAVE) ====== */
+/* ==================== HEADER PERFECTO – TODO EN LÍNEA ==================== */
+.header {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;              /* ← CLAVE: todo centrado verticalmente */
+  justify-content: space-between;
+  min-height: 80px;                 /* altura fija para que no se mueva nada */
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo + Título */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.brand__logo {
+  height: 50px;           /* un poco más grande y visible */
+  width: auto;
+}
+
 .brand__title {
-  font-size: 2.1rem;           /* más grande y potente */
-  font-weight: 800;
+  font-size: 2.4rem;
+  font-weight: 900;
   letter-spacing: -1px;
   
-  /* Animación de colores degradados que se mueven */
-  background: linear-gradient(90deg, 
-    #ff006e, #8338ec, #3a86ff, #ffbe0b, #fb5607, #ff006e);
+  /* Animación arcoíris */
+  background: linear-gradient(90deg, #ff006e, #8338ec,#ffbe0b, #ff006e);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
-  
-  /* Animación infinita y suave */
   animation: rainbowFlow 12s ease infinite;
 }
 
-/* La animación del arcoíris */
 @keyframes rainbowFlow {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-/* ====== MENÚ MÁS GRANDE Y PROFESIONAL ====== */
+/* Menú – ahora está perfectamente alineado */
 .nav {
   display: flex;
-  gap: 3rem;                    /* más espacio entre enlaces */
   align-items: center;
+  gap: 4.5rem;                    /* espacio generoso entre enlaces */
 }
 
 .nav a {
   color: white;
-  font-weight: 600;             /* letra más bold */
-  font-size: 1.15rem;           /* tamaño más grande (antes era 1.05rem) */
+  font-weight: 600;
+  font-size: 1.1rem;
   position: relative;
+  padding: 0.5rem 0;
   transition: all 0.3s ease;
 }
 
-/* Línea debajo que crece al pasar el ratón (más gruesa y rápida) */
 .nav a::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 3px;                  /* línea más gruesa */
+  height: 3px;
   bottom: -8px;
   left: 50%;
-  background: linear-gradient(90deg, #ff006e);
+  background: var(--accent);
   border-radius: 2px;
   transition: width 0.4s ease, left 0.4s ease;
 }
 
+.nav a:hover {
+  color: var(--accent);
+}
 
 .nav a:hover::after {
   width: 100%;
   left: 0;
 }
 
-/* En móvil también se ve más grande */
-@media (max-width: 868px) {
-  .nav a {
-    font-size: 1.4rem;          /* en móvil el menú desplegado queda grande y claro */
-    padding: 0.8rem 0;
-  }
-  
-  .brand__title {
-    font-size: 1.9rem;          /* un poco más pequeño en móvil para que quepa bien */
-  }
+/* Botón hamburguesa */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
+
+.nav-toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* MÓVIL – Menú hamburguesa */
+@media (max-width: 992px) {
+  .nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.98);
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 2rem;
+    text-align: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-toggle { display: block; }
+
+  .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(9px, 9px); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(8px, -8px); }
+}
+
 /*============================================================================*/
 /*====================== FIN MENÚ (móviles) ==================================*/
 /*============================================================================*/
+
 /* Hero */
 .hero { display: flex; align-items: center; justify-content: center; padding: 6rem 0; background: var(--gray); }
 .hero{background-image: url(./Assets/Main\ imagen.png);  background-size: cover;   background-position: center;   }
