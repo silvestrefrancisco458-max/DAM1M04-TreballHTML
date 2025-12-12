@@ -6,21 +6,24 @@
   <title>Código Secreto — Joc de Taula</title>
   <meta name="description" content="Código Secreto: el joc de taula d'espionatge per equips. Estratègia, deducció i diversió.">
   
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!---<img src="./creacion.png" alt="Un peix de colors" width="200"/>-->
+
+  <!-- Header -->
   <header class="header">
-    <div class="container">
+    <div class="container header-container">
       <div class="brand">
         <img src="./Detectif.png" alt="Logo Código Secreto" class="logo">
         <h1 class="title">Código Secreto</h1>
       </div>
-      <nav class="nav">
+      <nav class="nav" aria-label="Menú principal">
         <a href="index.html">Inici</a>
         <a href="instrucciones.html">Instruccions</a>
         <a href="historia.html">Història</a>
@@ -30,73 +33,74 @@
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h2>Pon a prova les teves habilitats d'espionatge</h2>
-          <p>Un joc d'equips ple d'intriga: dóna pistes, endevina paraules i evita l'assassí. Estratègia i diversió garantides.</p>
-          <a href="instrucciones.html" class="btn">Comença a jugar</a>
-        </div>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2>Pon a prova les teves habilitats d'espionatge</h2>
+        <p>Un joc d'equips ple d'intriga: dóna pistes, endevina paraules i evita l'assassí. Estratègia i diversió garantides.</p>
+        <a href="instrucciones.html" class="btn">Comença a jugar</a>
       </div>
-    </section>
-
-    <!-- Com es juga -->
-    <section class="how-to">
-      <div class="container">
-        <h2>Com es juga?</h2>
-        <div class="steps">
-          <div class="step">
-            <span class="number">1</span>
-            <p>Es formen dos equips i es tria un cap d'espies per equip.</p>
-          </div>
-          <div class="step">
-            <span class="number">2</span>
-            <p>Es col·loquen 25 paraules en una graella de 5x5.</p>
-          </div>
-          <div class="step">
-            <span class="number">3</span>
-            <p>Els caps donen pistes d'una sola paraula i un número.</p>
-          </div>
-          <div class="step">
-            <span class="number">4</span>
-            <p>Els agents endevinen paraules del seu color... sense tocar l'assassí!</p>
-          </div>
-          <div class="step">
-            <span class="number">5</span>
-            <p>Guanya el primer equip que identifiqui tots els seus agents.</p>
-          </div>
-        </div>
-        <p class="more"><a href="instrucciones.html">Veure instruccions completes →</a></p>
+      <div class="hero-image">
+        <img src="./hero-image.png" alt="Joc de taula Código Secreto">
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Aventura -->
-    <section class="features">
-      <div class="container">
-        <h2>L'aventura del joc</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Preparació</h3>
-            <p>Cartes, paraules secretes i rols assignats. Tot a punt per començar la missió.</p>
-          </div>
-          <div class="card">
-            <h3>Pistes intel·ligents</h3>
-            <p>Els caps d'espies connecten paraules amb una sola pista astuta.</p>
-          </div>
-          <div class="card">
-            <h3>Victòria o derrota</h3>
-            <p>Endevina bé i guanya... o toca l'assassí i perd l'equip al moment.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
+  <!-- Secció Com es juga -->
+  <section class="how-to">
     <div class="container">
+      <h2>Com es juga?</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="number">1</span>
+          <p>Formeu dos equips i trieu un cap d'espies per equip.</p>
+        </div>
+        <div class="step">
+          <span class="number">2</span>
+          <p>Col·loqueu 25 paraules en una graella de 5x5.</p>
+        </div>
+        <div class="step">
+          <span class="number">3</span>
+          <p>Els caps donen pistes d'una sola paraula i un número.</p>
+        </div>
+        <div class="step">
+          <span class="number">4</span>
+          <p>Els agents endevinen paraules del seu color sense tocar l'assassí.</p>
+        </div>
+        <div class="step">
+          <span class="number">5</span>
+          <p>Guanya el primer equip que identifiqui tots els seus agents.</p>
+        </div>
+      </div>
+      <p class="more"><a href="instrucciones.html">Veure instruccions completes →</a></p>
+    </div>
+  </section>
+
+  <!-- Característiques del joc -->
+  <section class="features">
+    <div class="container">
+      <h2>L'aventura del joc</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Preparació</h3>
+          <p>Cartes, paraules secretes i rols assignats. Tot a punt per començar la missió.</p>
+        </div>
+        <div class="card">
+          <h3>Pistes intel·ligents</h3>
+          <p>Els caps d'espies connecten paraules amb una sola pista astuta.</p>
+        </div>
+        <div class="card">
+          <h3>Victòria o derrota</h3>
+          <p>Endevina bé i guanya... o toca l'assassí i perd l'equip al moment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
       <p>&copy; 2025 Código Secreto. Tots els drets reservats.</p>
       <div class="social">
         <a href="#" aria-label="Twitter">T</a>
