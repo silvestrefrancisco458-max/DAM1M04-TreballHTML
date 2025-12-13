@@ -20,11 +20,14 @@
   <header class="header">
     <div class="container header__inner">
       
-      <!-- Logo + Título (todo junto y alineado) -->
+      <!-- Logo + Título -->
       <a href="index.html" class="brand">
         <img src="./Assets/logo_candado.png" alt="Logo Código Secreto" class="brand__logo">
         <span class="brand__title">Código Secreto</span>
       </a>
+
+      <!-- Checkbox ocult per controlar el menú mòbil -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
 
       <!-- Menú -->
       <nav class="nav">
@@ -35,12 +38,12 @@
         <a href="about.html">About</a>
       </nav>
 
-      <!-- Botón hamburguesa (solo móvil) -->
-      <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+      <!-- Botó hamburguesa (ara és un label) -->
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menú">
         <span></span>
         <span></span>
         <span></span>
-      </button>
+      </label>
     </div>
   </header>
 

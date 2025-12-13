@@ -142,9 +142,9 @@ a:hover { color: #d32f2f; text-decoration: underline; }
 
 .header__inner {
   display: flex;
-  align-items: center;              /* ← CLAVE: todo centrado verticalmente */
+  align-items: center;
   justify-content: space-between;
-  min-height: 80px;                 /* altura fija para que no se mueva nada */
+  min-height: 80px;
   padding: 0 2rem;
   max-width: 1400px;
   margin: 0 auto;
@@ -159,7 +159,7 @@ a:hover { color: #d32f2f; text-decoration: underline; }
 }
 
 .brand__logo {
-  height: 5rem;           /* un poco más grande y visible */
+  height: 5rem;
   width: auto;
 }
 
@@ -167,9 +167,7 @@ a:hover { color: #d32f2f; text-decoration: underline; }
   font-size: 2.4rem;
   font-weight: 900;
   letter-spacing: -1px;
-  
-  /* Animación arcoíris */
-  background: linear-gradient(90deg, #ff006e, #8338ec,#ffbe0b, #ff006e);
+  background: linear-gradient(90deg, #ff006e, #8338ec, #ffbe0b, #ff006e);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -182,11 +180,11 @@ a:hover { color: #d32f2f; text-decoration: underline; }
   50% { background-position: 100% 50%; }
 }
 
-/* Menú – ahora está perfectamente alineado */
+/* Menú en escritorio */
 .nav {
   display: flex;
   align-items: center;
-  gap: 4.5rem;                    /* espacio generoso entre enlaces */
+  gap: 4.5rem;
 }
 
 .nav a {
@@ -219,53 +217,98 @@ a:hover { color: #d32f2f; text-decoration: underline; }
   left: 0;
 }
 
-/* Botón hamburguesa */
-.nav-toggle {
+/* Checkbox ocult */
+.nav-toggle-checkbox {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
-.nav-toggle span {
+/* Botón hamburguesa (label) */
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.nav-toggle-label span {
   display: block;
   width: 30px;
   height: 3px;
   background: white;
-  margin: 6px 0;
   border-radius: 3px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
-/* MÓVIL – Menú hamburguesa */
+/* Animación: convertir las 3 líneas en X */
+#nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+#nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+#nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* MEDIA QUERY PARA MÓVIL */
 @media (max-width: 992px) {
+  /* Mostrar botón hamburguesa */
+  .nav-toggle-label {
+    display: flex;
+  }
+
+  /* Ocultar menú por defecto */
   .nav {
     position: fixed;
     top: 80px;
     left: 0;
     right: 0;
     background: rgba(26, 26, 26, 0.98);
+    backdrop-filter: blur(10px);
     flex-direction: column;
-    padding: 2rem 0;
-    gap: 2rem;
+    padding: 3rem 0;
+    gap: 2.5rem;
     text-align: center;
-    transform: translateY(-100%);
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease;
+    z-index: 1000;
   }
 
-  .nav.open {
-    transform: translateY(0);
+  /* Abrir menú cuando el checkbox está marcado */
+  #nav-toggle:checked ~ .nav {
+    max-height: 600px;
     opacity: 1;
     visibility: visible;
   }
 
-  .nav-toggle { display: block; }
+  /* Enlaces más grandes en móvil */
+  .nav a {
+    font-size: 1.4rem;
+  }
+}
 
-  .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(9px, 9px); }
-  .nav-toggle.open span:nth-child(2) { opacity: 0; }
-  .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(8px, -8px); }
+/* Asegurar que en escritorio el menú siempre esté visible */
+@media (
+  min-width: 993px) {
+  .nav {
+    display: flex !important;
+    position: static;
+    background: none;
+    backdrop-filter: none;
+    max-height: none;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    padding: 0;
+  }
 }
 
 /*============================================================================*/
