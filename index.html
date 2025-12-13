@@ -16,7 +16,9 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!--------------------------------------------------------->
+  <!--                       Header                        -->
+  <!--------------------------------------------------------->
   <header class="header">
     <div class="container header__inner">
       
@@ -39,29 +41,34 @@
       </nav>
 
       <!-- Botó hamburguesa (ara és un label) -->
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menú">
-        <span></span>
-        <span></span>
-        <span></span>
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Obrir menú">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </label>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!--------------------------------------------------------->
+  <!--                    Hero Section                     -->
+  <!--------------------------------------------------------->
+  <section class="hero" aria-labelledby="hero-title">
     <div class="container hero-content">
       <div class="hero-text">
         <h2>Pon a prova les teves habilitats d'espionatge</h2>
-        <p>Un joc d'equips ple d'intriga: dóna pistes, endevina paraules i evita l'assassí. Estratègia i diversió garantides.</p>
+        <p>Un joc d'equips ple d'intriga: dóna pistes, 
+          endevina paraules i evita l'assassí. Estratègia i diversió garantides.</p>
         <a href="instrucciones.html" class="btn">Comença a jugar</a>
       </div>
       <div class="hero-image">
-        <img src="./Assets/code_name.png" alt="Joc de taula Código Secreto">
+        <img src="./Assets/code_name.png" alt="Joc de taula Código Secreto"loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- Secció Com es juga -->
+  <!--------------------------------------------------------->
+  <!--                  Secció Com es juga                 -->
+  <!--------------------------------------------------------->
   <section class="how-to">
     <div class="container">
       <h2>Com es juga?</h2>
@@ -85,38 +92,69 @@
         <div class="step">
           <span class="number">5</span>
           <p>Guanya el primer equip que identifiqui tots els seus agents.</p>
+          <p class="more"><a href="instrucciones.html">Veure instruccions completes →</a></p>
         </div>
       </div>
-      <p class="more"><a href="instrucciones.html">Veure instruccions completes →</a></p>
     </div>
   </section>
 
-  <!-- Característiques del joc -->
-  <section class="features">
+  <!--------------------------------------------------------->
+  <!--              Característiques del joc               -->
+  <!--------------------------------------------------------->
+  <section class="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title">L'aventura del joc</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Preparació</h3>
+            <p>Cartes, paraules secretes i rols assignats. Tot a punt per començar la missió.</p>
+          </article>
+          <article class="card">
+            <h3>Pistes intel·ligents</h3>
+            <p>Els caps d'espies connecten paraules amb una sola pista astuta.</p>
+          </article>
+          <article class="card">
+            <h3>Victòria o derrota</h3>
+            <p>Endevina bé i guanya... o toca l'assassí i perd l'equip al moment.</p>
+          </article>
+        </div>
+      </div>
+  </section>
+
+  <!--------------------------------------------------------->
+  <!--          Com es veu el joc (5 imatges reals)        -->
+  <!--------------------------------------------------------->
+  <section class="features" aria-labelledby="visual-title">
     <div class="container">
-      <h2>L'aventura del joc</h2>
+      <h2 id="visual-title">Com es veu el joc</h2>
       <div class="grid">
-        <div class="card">
-          <h3>Preparació</h3>
-          <p>Cartes, paraules secretes i rols assignats. Tot a punt per començar la missió.</p>
-        </div>
-        <div class="card">
-          <h3>Pistes intel·ligents</h3>
-          <p>Els caps d'espies connecten paraules amb una sola pista astuta.</p>
-        </div>
-        <div class="card">
-          <h3>Victòria o derrota</h3>
-          <p>Endevina bé i guanya... o toca l'assassí i perd l'equip al moment.</p>
-        </div>
+        <article class="card visual-card">
+          <img src="./Assets/Image1.png"alt="familiar de acció amb cartes descobertes"loading="lazy">
+        </article>
+        <article class="card visual-card">
+          <img src="./Assets/imagen2.png"alt="jugant una partida real de Codenames"loading="lazy">
+        </article>
+        <article class="card visual-card">
+          <img src="./Assets/imagen3.png"alt="Partida familiar de Codenames en acció amb cartes descobertes"loading="lazy">
+        </article>
+        <article class="card visual-card">
+          <img src="Assets/imagen4.png"alt="Codenames amb targetes i components"loading="lazy">
+        </article>
+        <article class="card visual-card">
+          <img src="Assets/imagen5.png"alt="partida cooperativa a 2 jugadors"loading="lazy">
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+
+  <!--------------------------------------------------------->
+  <!--                       Header                        -->
+  <!--------------------------------------------------------->
+  <footer class="footer" aria-label="Peu de pàgina">
     <div class="container footer-container">
       <p>&copy; 2025 Código Secreto. Tots els drets reservats.</p>
-      <div class="social">
+      <div class="social" aria-label="Xarxes socials">
         <a href="#" aria-label="Twitter">T</a>
         <a href="#" aria-label="Instagram">I</a>
         <a href="#" aria-label="Facebook">F</a>
