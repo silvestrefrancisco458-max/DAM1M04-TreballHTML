@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us — Código Secreto</title>
-  <link rel="stylesheet" href="style.css">
-
+  <title>Código Secreto — Joc de Taula</title>
+  <meta name="description" content="Código Secreto: el joc de taula d'espionatge per equips. Estratègia, deducció i diversió.">
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <!-- HEADER -->
+
+    <!--------------------------------------------------------->
+    <!--                       Header                        -->
+    <!--------------------------------------------------------->
     <header class="header">
         <div class="container header__inner">
         
-        <!-- Logo + Título (todo junto y alineado) -->
+        <!-- Logo + Título -->
         <a href="index.html" class="brand">
-            <img src="./Assets/Detectif.png" alt="Logo Código Secreto" class="brand__logo">
+            <img src="./Assets/logo_candado.png" alt="Logo Código Secreto" class="brand__logo">
             <span class="brand__title">Código Secreto</span>
         </a>
+
+        <!-- Checkbox ocult per controlar el menú mòbil -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
 
         <!-- Menú -->
         <nav class="nav">
@@ -30,42 +39,59 @@
             <a href="contacto.html">Contacte</a>
             <a href="about.html">About</a>
         </nav>
+
+        <!-- Botó hamburguesa (ara és un label) -->
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Obrir menú">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </label>
         </div>
     </header>
 
-        <!-- CONTINGUT PRINCIPAL -->
-    <main>
-        <section class="hero">
-        <div class="container hero-center">
-            <h2>Sobre nosaltres</h2>
-            <p>Som l'equip creador de la versió web del joc "Código Secreto".</p>
+    <!--------------------------------------------------------->
+    <!--                    Hero Section                     -->
+    <!--------------------------------------------------------->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-content">
+        <div class="hero-text">
+            <h2>Pon a prova les teves habilitats d'espionatge</h2>
+            <p>Un joc d'equips ple d'intriga: dóna pistes, 
+            endevina paraules i evita l'assassí. Estratègia i diversió garantides.</p>
+            <a href="instrucciones.html" class="btn">Comença a jugar</a>
         </div>
-        </section>
+        <div class="hero-image">
+            <img src="./Assets/code_name.png" alt="Joc de taula Código Secreto"loading="lazy">
+        </div>
+        </div>
+    </section>
 
-        <section class="about-team">
-            <div class="container">
-                <h2>Participants del projecte</h2>
-
-                <ul class="team-list">
-                    <li>Silvestre Ramírez Francisco Alberto</li>
-                    <li>Rios Herrera Javier</li>
-                </ul>
-
-                <h2>Demostració del joc</h2>
-
-                <div class="video-frame">
-                    <iframe
-                        src="https://www.youtube.com/embed/NZS-3WO2ZsQ"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+    <!--------------------------------------------------------->
+    <!--                Nombre de los creadores              -->
+    <!--------------------------------------------------------->
+    <section class="about-team">
+        <div class="container">
+            <h2>Participants</h2>
+            <ul class="team-list">
+                <li>Silvestre Ramírez Francisco Alberto</li>
+                <li>Rios Herrera Javier</li>
+            </ul>
+            <h2>Demostració del joc</h2>
+            <div class="video-frame">
+                <iframe
+                    src="https://www.youtube.com/embed/NZS-3WO2ZsQ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- FOOTER -->
+    <!--------------------------------------------------------->
+    <!--                        FOOTER                       -->
+    <!--------------------------------------------------------->
+
     <footer class="footer">
         <div class="container">
         <p>&copy; 2025 Código Secreto. Tots els drets reservats.</p>
