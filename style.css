@@ -197,7 +197,8 @@ a:hover {
 }
 
 /* MEDIA QUERY PARA MÓVIL */
-@media (max-width: 992px) {
+@media (
+  max-width: 992px) {
   /* Mostrar botón hamburguesa */
   .nav-toggle-label {
     display: flex;
@@ -256,6 +257,9 @@ a:hover {
 /*====================== FIN MENÚ (móviles) ==================================*/
 /*============================================================================*/
 
+/*------------------------------------------------------------------------*/
+/*                            Header                                      */
+/*------------------------------------------------------------------------*/
 /* Clase auxiliar para ocultar visualmente pero mantener accesible */
 .visually-hidden {
   position: absolute;
