@@ -428,9 +428,129 @@ a:hover {
 /*----------------------------------------------------------------------------------------------- */
 /*                                            HISTORIA                                            */
 /*----------------------------------------------------------------------------------------------- */
+/* === SECCIÓN HISTORIA === */
+.historia {
+  background-color: rgb(0, 0, 0);
+
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
 
 
+    
+}
 
+/* Ocultar radios */
+.historia input[type="radio"] {
+    display: none;
+}
+
+/* === CONTENEDOR DE SLIDES === */
+.carousel-fondo {
+  display: flex;
+    position: absolute;
+  z-index: 1;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+     box-shadow:inset 0 0 80px rgba(0,0,0,0.7);
+}
+
+/* Imagen de fondo */
+.carousel-fondo > img {
+    width: 100%;
+    height: 85vh;   
+    object-fit: cover;
+}
+
+
+/* Overlay oscuro */
+.carousel-fondo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* === TEXTO SUPERPUESTO === */
+.personajes_texto {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.personajes_texto p {
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Imagen pequeña */
+.personajes_corusel img {
+    width: 500px;
+    border-radius: 25px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* === DOTS === */
+.dots {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;             
+    z-index: 20;
+
+    display: flex;
+    justify-content: center;  
+        gap: 12px;
+}
+
+
+.dots label {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+   
+}
+
+
+/* === SLIDE ACTIVO === */
+#slide1:checked ~ .carousel-fondo:nth-of-type(1),
+#slide2:checked ~ .carousel-fondo:nth-of-type(2),
+#slide3:checked ~ .carousel-fondo:nth-of-type(3) {
+    opacity: 1;
+    position: relative;
+}
+
+/* Dot activo */
+#slide1:checked ~ .dots label:nth-child(1),
+#slide2:checked ~ .dots label:nth-child(2),
+#slide3:checked ~ .dots label:nth-child(3) {
+    background: white;
+}
+
+
+.carousel-fondo h1{
+  color: white;
+  font-size: 50px;
+  text-shadow:0 0 8px rgba(255, 255, 255, 0.8);
+}
+.carousel-fondo p{
+  color: white;
+  font-size: 20px;
+  text-shadow:0 0 8px rgba(110, 110, 110, 0.8);
+
+}
 
 
 
