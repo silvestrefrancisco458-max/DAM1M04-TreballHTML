@@ -590,8 +590,8 @@ a:hover {
 
 
 .tarjetas_mecanica {
-  width: 30rem;
-  height: 35rem;
+  width: 20rem;
+  height: 25rem;
   perspective: 1000px;
   cursor: pointer;
   outline: none;
@@ -607,8 +607,7 @@ a:hover {
 }
 
 /* GIRO */
-.tarjetas_mecanica:focus .tarjeta_interior
- {
+.tarjetas_mecanica:focus-within .tarjeta_interior {
   transform: rotateY(180deg);
 }
 
