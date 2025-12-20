@@ -470,7 +470,6 @@ a:hover {
 /*                                            INSTRUCCIONS                                        */
 /*----------------------------------------------------------------------------------------------- */
 .main_instrucciones{
-  min-height: 100vh;
   background-image:url(Assets/fondo_aventura_joc.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -509,9 +508,9 @@ a:hover {
 .main_instrucciones h2{
    color: white;
    font-size: 50px;
-   letter-spacing: 2px;
+   letter-spacing: 3px;
    text-shadow:0 0 8px rgba(255, 255, 255, 0.8);
-  
+  font-weight: 300;
 
 }
 .instrucciones_juego{
@@ -524,21 +523,132 @@ a:hover {
   display: flex;
   flex-wrap: wrap; 
   justify-content: space-around;
- 
-
+  gap:2rem;
+  margin-bottom: 4rem;
   
+  
+}
+.contenedor_tarjetas_instrucciones1{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1200px;
+  gap:2rem;
+  margin-bottom: 4rem;
  
 }
+
+.contenedor_tarjetas_instrucciones2{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  margin: 0 auto;
+  text-align: center;
+  gap:2rem;
+  margin-bottom: 4rem;
+  
+}
+
+
+
 .tarjetas_instrucciones {
   width: 30rem;
   height: 10rem;
   border-radius: 25px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center; 
+  text-align: center;
   background-color: rgb(255, 255, 255,0.3);   
+  cursor: pointer;
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
 
 
+
+.tarjetas_instrucciones:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.05); 
+  box-shadow: 
+    0 0 15px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+.contenedor_tarjetas_mecanica {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+
+.tarjetas_mecanica {
+  width: 30rem;
+  height: 35rem;
+  perspective: 1000px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* INTERIOR QUE GIRA */
+.tarjeta_interior {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* GIRO */
+.tarjetas_mecanica:focus .tarjeta_interior
+ {
+  transform: rotateY(180deg);
+}
+
+/* CARAS */
+.tarjeta_front,
+.tarjeta_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  backface-visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 1.2rem;
+}
+
+/* FRONTAL */
+.tarjeta_front {
+  background-color: rgba(38, 22, 106, 0.3);
+  color: white;
+}
+
+.tarjeta_front p {
+  color: white;
+   font-size: 20px;
+   letter-spacing: 3px;
+   text-shadow:0 0 8px rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+}
+
+/* TRASERA */
+.tarjeta_back {
+    background-color: rgba(251, 251, 255, 0.85);
+  color: black;
+  transform: rotateY(180deg);
 }
 
 
