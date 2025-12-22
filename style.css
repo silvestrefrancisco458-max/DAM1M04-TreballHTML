@@ -581,12 +581,16 @@ a:hover {
 
 
 
-
 .contenedor_tarjetas_mecanica {
   display: flex;
   gap: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
+  
+  margin-bottom:2rem;  
 }
+
+
 
 
 .tarjetas_mecanica {
@@ -595,7 +599,12 @@ a:hover {
   perspective: 1000px;
   cursor: pointer;
   outline: none;
+  
 }
+
+
+
+
 
 /* INTERIOR QUE GIRA */
 .tarjeta_interior {
@@ -633,6 +642,13 @@ a:hover {
 .tarjeta_front {
   background-color: rgba(38, 22, 106, 0.3);
   color: white;
+  transition: transform 0.3s ease
+}
+
+.tarjeta_front:hover {
+   box-shadow:0 0 10px rgba(130, 102, 255, 0.518);
+   transform: scale(1.05);
+  
 }
 
 .tarjeta_front p {
@@ -645,7 +661,7 @@ a:hover {
 
 /* TRASERA */
 .tarjeta_back {
-    background-color: rgba(251, 251, 255, 0.85);
+  background-color: rgba(251, 251, 255, 0.2);
   color: black;
   transform: rotateY(180deg);
 }
