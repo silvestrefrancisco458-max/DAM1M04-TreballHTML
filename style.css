@@ -671,11 +671,6 @@ a:hover {
 
 
 
-
-
-
-
-
 /*----------------------------------------------------------------------------------------------- */
 /*                                            HISTORIA                                            */
 /*----------------------------------------------------------------------------------------------- */
@@ -856,6 +851,173 @@ a:hover {
  
      
 }
+/*----------------------------------------------------------------------------------------------- */
+/*                                            CONTACTE                                            */
+/*----------------------------------------------------------------------------------------------- */
+
+.pagina-contacto{
+     background: linear-gradient(130deg, #ffc421, #df0463);
+     background-size: 150% 150%; 
+    animation: fondo_contacte 15s ease-in-out infinite;
+   
+   
+}
+
+.seccion-contacto h2{
+  color: white;
+   font-size: 50px;
+   letter-spacing: 3px;
+     text-shadow:0 0 5px rgba(1, 84, 68, 0.6);
+  font-weight: 300;
+  margin: 2rem;
+  margin-bottom: 4rem;
+}
+.seccion-contacto p{
+  color: white;
+   font-size: 25px;
+   letter-spacing: 3px;
+   text-shadow:0 0 5px rgba(1, 84, 68, 0.4);
+  font-weight: 300;
+}
+
+.seccion-contacto a{
+  color: white;
+   font-size: 25px;
+   letter-spacing: 3px;
+  
+  font-weight: 300;
+}
+
+@keyframes fondo_contacte {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+
+.contenedor-contacto{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+
+}
+.info-contacto{
+  display: flex;
+  flex-direction: column;
+  gap:1rem
+}
+
+
+
+.formulario-contacto{
+  display:flex ;
+  flex-direction: column;
+  width: 30rem;
+  height: 40rem;
+  border-radius: 25px;
+  justify-content: center;
+  padding: 0.7rem;
+  
+  
+  background-color: rgba(1, 124, 110, 0.3);   
+  backdrop-filter: blur(5px);
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+
+}
+.mapa-contacto {
+  position: relative;
+  width:50rem;
+  height: 300px;  
+  border-radius: 16px;
+  overflow: hidden;
+   box-shadow:0 0 5px rgba(1, 84, 68, 0.4);
+
+}
+
+.mapa-contacto iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  
+}
+
+  input,textarea {
+    padding: 0.7rem;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    margin-bottom: 2.5rem;     
+}
+
+
+ 
+
+.formulario-contacto button{
+  align-self:  center;
+display: flex;
+justify-content: center;
+ height: 50px;
+ width: 110px;
+ border:none;
+ background-color: rgb(1, 124, 110);   
+ border-radius: 6px;
+ transition: 0.2s ease;
+ margin-bottom: 2.5rem; 
+ color: white;
+font-size:  18px; 
+letter-spacing: 2px;
+font-weight: 500;
+}
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="tel"]:invalid,
+input[type="number"]:invalid  {
+border: 1px solid rgb(182, 0, 0);
+
+    
+}
+
+.formulario-contacto button:hover{
+   background-color: rgb(0, 68, 60);  
+
+   cursor: pointer;
+  transform: scale(1.02);    
+
+}
+
+
+input:hover, textarea:hover{
+     cursor: pointer;
+     background-color: #45416ab3; 
+
+}
+input:focus,textarea:focus {
+    outline: none;
+    box-shadow: 0 0 3px #ffffff;
+    background-color: white;
+    transform: scale(1.03);    
+}
+
+label{
+  color: white;
+  font-size:  18px; 
+  text-shadow:0 0 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+
+
+
+
 
 /*----------------------------------------------------------------------------------------------- */
 /*                                            ABOUT                                               */
