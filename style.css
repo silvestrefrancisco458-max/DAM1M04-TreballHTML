@@ -438,6 +438,13 @@ a:hover {
   flex-wrap: wrap; 
   gap: 1rem; 
 }
+
+.footer-container p { 
+   
+  margin-left: 1rem; 
+  color: white; 
+}
+ 
 .social a { 
   font-size: 1.5rem; 
   margin-left: 1rem; 
