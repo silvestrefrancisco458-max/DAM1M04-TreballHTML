@@ -674,9 +674,78 @@ a:hover {
 }
 
 
+/*----------------------MOVIL----------------------*/
 
 
+@media (max-width: 768px) {
 
+  .main_instrucciones {
+    padding: 1rem;
+  }
+
+
+  .main_instrucciones h1 {
+    font-size: 42px;
+    margin-top: 2rem;
+  }
+
+  .main_instrucciones h2 {
+    font-size: 32px;
+  }
+
+  .titulo2_instrucciones {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .main_instrucciones p {
+    font-size: 16px;
+  }
+
+  
+  .contenedor_tarjetas_instrucciones,
+  .contenedor_tarjetas_instrucciones1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor_tarjetas_instrucciones2 {
+    padding: 0 1rem;
+  }
+
+
+  .tarjetas_instrucciones {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 1.2rem;
+  }
+
+  
+  .contenedor_tarjetas_mecanica {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjetas_mecanica {
+    width: 100%;
+    max-width: 300px;
+    height: 22rem;
+  }
+
+  
+  .tarjeta_front p {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+
+  .tarjetas_instrucciones:hover,
+  .tarjeta_front:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
 
 /*----------------------------------------------------------------------------------------------- */
 /*                                            HISTORIA                                            */
@@ -854,10 +923,67 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
- 
      
 }
+/*----------------------MOVIL----------------------*/
+@media (max-width: 768px) {
+
+  
+  .carousel-fondo > img {
+    height: 70vh;
+  }
+
+  .personajes_texto {
+    padding: 1.2rem;
+  }
+
+  .personajes_texto h1 {
+    font-size: 32px;
+  }
+
+  .personajes_texto p {
+    font-size: 16px;
+    max-width: 90%;
+  }
+
+  
+  .personajes_corusel img {
+    width: 260px;
+  }
+
+
+  .dots {
+    bottom: 10px;
+  }
+
+  .dots label {
+    width: 16px;
+    height: 16px;
+  }
+
+ 
+  .contenedor_historia_real {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .texto_historia_real h1 {
+    font-size: 32px;
+  }
+
+  .texto_historia_real p {
+    font-size: 16px;
+  }
+
+
+  .imagen_creador {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+
 /*----------------------------------------------------------------------------------------------- */
 /*                                            CONTACTE                                            */
 /*----------------------------------------------------------------------------------------------- */
@@ -1022,7 +1148,69 @@ label{
   font-weight: 500;
 }
 
+/*----------------------MOVIL----------------------*/
 
+
+@media (max-width: 768px) {
+
+  /* TÍTULOS */
+  .seccion-contacto h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .seccion-contacto p,
+  .seccion-contacto a {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  /* CONTENEDOR GENERAL */
+  .contenedor-contacto {
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  /* INFO CONTACTO */
+  .info-contacto {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* FORMULARIO */
+  .formulario-contacto {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 1.2rem;
+  }
+
+  /* INPUTS */
+  input,
+  textarea {
+    font-size: 16px;
+    margin-bottom: 1.8rem;
+  }
+
+  /* BOTÓN */
+  .formulario-contacto button {
+    width: 100%;
+    max-width: 180px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  /* MAPA */
+  .mapa-contacto {
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+  }
+}
 
 
 

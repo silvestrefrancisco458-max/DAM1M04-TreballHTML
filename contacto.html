@@ -16,21 +16,35 @@
 </head>
 
 <body class="pagina-contacto">
-
-    <header class="header">
-    <div class="container header__inner">   
-        <a href="index.html" class="brand">
+<header class="header">
+    <div class="container header__inner">
+      
+      <!-- Logo + Título -->
+      <a href="index.html" class="brand">
         <img src="./Assets/logo_candado.png" alt="Logo Código Secreto" class="brand__logo">
         <span class="brand__title">Codi Secret</span>
-        </a>
-        <nav class="nav">
+      </a>
+
+      <!-- Checkbox ocult per controlar el menú mòbil -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+
+      <!-- Menú -->
+      <nav class="nav">
         <a href="index.html">Inici</a>
         <a href="instrucciones.html">Instruccions</a>
         <a href="historia.html">Història</a>
         <a href="contacto.html">Contacte</a>
         <a href="about.html">About</a>
-        </nav>
-    </header>
+      </nav>
+
+      <!-- Botó hamburguesa (ara és un label) -->
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Obrir menú">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </label>
+    </div>
+  </header>
 
     <main>
 
