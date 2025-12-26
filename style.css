@@ -870,6 +870,11 @@ a:hover {
    
 }
 
+@keyframes fondo_contacte {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 .seccion-contacto h2{
   color: white;
    font-size: 50px;
@@ -895,10 +900,6 @@ a:hover {
   font-weight: 300;
 }
 
-@keyframes fondo_contacte {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
 
 
 .contenedor-contacto{
