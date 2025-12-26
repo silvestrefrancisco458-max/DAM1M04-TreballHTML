@@ -1168,20 +1168,20 @@ label{
     text-align: center;
   }
 
-  /* CONTENEDOR GENERAL */
+  
   .contenedor-contacto {
     flex-direction: column;
     gap: 2.5rem;
     margin-bottom: 5rem;
   }
 
-  /* INFO CONTACTO */
+ 
   .info-contacto {
     align-items: center;
     text-align: center;
   }
 
-  /* FORMULARIO */
+  
   .formulario-contacto {
     width: 100%;
     max-width: 320px;
@@ -1189,22 +1189,21 @@ label{
     padding: 1.2rem;
   }
 
-  /* INPUTS */
+  
   input,
   textarea {
     font-size: 16px;
     margin-bottom: 1.8rem;
   }
 
-  /* BOTÓN */
+
   .formulario-contacto button {
     width: 100%;
     max-width: 180px;
     height: 45px;
     font-size: 16px;
   }
-
-  /* MAPA */
+  
   .mapa-contacto {
     width: 100%;
     max-width: 320px;
