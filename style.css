@@ -987,7 +987,7 @@ a:hover {
 /*----------------------------------------------------------------------------------------------- */
 /*                                            CONTACTE                                            */
 /*----------------------------------------------------------------------------------------------- */
-
+/*Es un fondo animado degradado que hace que la página de contacto se vea más viva y profesional.*/
 .pagina-contacto{
      background: linear-gradient(130deg, #ffc421, #df0463);
      background-size: 150% 150%; 
@@ -1001,6 +1001,7 @@ a:hover {
   50% { background-position: 100% 50%; }
 }
 
+/*Para el título principal de h2*/
 .seccion-contacto h2{
   color: white;
    font-size: 50px;
@@ -1010,6 +1011,7 @@ a:hover {
   margin: 2rem;
   margin-bottom: 4rem;
 }
+/*Para los paragrafo*/
 .seccion-contacto p{
   color: white;
    font-size: 25px;
@@ -1017,7 +1019,7 @@ a:hover {
    text-shadow:0 0 5px rgba(1, 84, 68, 0.4);
   font-weight: 300;
 }
-
+/*Para los enlaceres*/
 .seccion-contacto a{
   color: white;
    font-size: 25px;
@@ -1026,8 +1028,7 @@ a:hover {
   font-weight: 300;
 }
 
-
-
+/*Para el estilo del formulario*/
 .contenedor-contacto{
   display:flex;
   justify-content: space-around;
@@ -1035,8 +1036,8 @@ a:hover {
   gap: 3rem;
   flex-wrap: wrap;
   margin-bottom: 10rem;
-
 }
+/*Para el estilo del informacion*/
 .info-contacto{
   display: flex;
   flex-direction: column;
@@ -1044,7 +1045,7 @@ a:hover {
 }
 
 
-
+/*PMedidas del formulario*/
 .formulario-contacto{
   display:flex ;
   flex-direction: column;
@@ -1063,6 +1064,7 @@ a:hover {
     background-color 0.2s ease;
 
 }
+/*mapa y estilo del mapa*/
 .mapa-contacto {
   position: relative;
   width:50rem;
@@ -1305,7 +1307,3 @@ label{
     height: 100%;
     border: 0;
 }
-
-/*----------------------------------------------------------------------------------------------- */
-/*                                            CONTACTO                                            */
-/*----------------------------------------------------------------------------------------------- */
